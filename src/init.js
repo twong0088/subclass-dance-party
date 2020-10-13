@@ -31,24 +31,28 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
+  //make all dancers line up in a line
   $('.lineUpDancers').on('click', function(event) {
     window.dancers.forEach(function(item) {
       item.lineUp();
     });
   });
 
+  //groups all dancers by type
   $('.groupUpDancers').on('click', function(event) {
     window.dancers.forEach(function(item) {
       item.groupUp();
     });
   });
 
+  //puts dancers back to random positions
   $('.randomizeDancers').on('click', function(event) {
     window.dancers.forEach(function(item) {
       item.randomize();
     });
   });
 
+  //removes a dancer on click
   $(document).on('click', '.dancer', function(event) {
     $(this).remove();
   });

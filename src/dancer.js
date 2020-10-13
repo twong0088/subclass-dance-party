@@ -32,6 +32,7 @@ makeDancer.prototype.lineUp = function() {
 makeDancer.prototype.groupUp = function() {
 };
 
+//puts dancers back to random positions
 makeDancer.prototype.randomize = function() {
   var left = Math.random() * 1100;
   var top = Math.random() * 600;
