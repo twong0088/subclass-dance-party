@@ -1,6 +1,5 @@
 var makeEdmDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.addClass('edmDancerBlue');
   this._changecolor = 1;
 };
 
@@ -11,6 +10,7 @@ makeEdmDancer.prototype.step = function () {
 
   makeDancer.prototype.step.call(this, 500);
 
+  //changes color every time step is called
   if (this._changecolor === 0) {
     this._changecolor = 1;
     this.$node.removeClass('edmDancerCyan');
@@ -38,6 +38,7 @@ makeEdmDancer.prototype.step = function () {
   }
 };
 
+//groups all same type to same location
 makeEdmDancer.prototype.groupUp = function() {
   var top = (Math.random() * 100) + 300;
   var left = (Math.random() * 200) + 900;

@@ -8,8 +8,9 @@ makeBouncyDancer.prototype = Object.create(makeDancer.prototype);
 makeBouncyDancer.prototype.constructor = makeBouncyDancer;
 
 makeBouncyDancer.prototype.step = function () {
-
 };
+
+//groups all same type to same location
 makeBouncyDancer.prototype.groupUp = function() {
   var top = (Math.random() * 100) + 300;
   var left = (Math.random() * 200);
