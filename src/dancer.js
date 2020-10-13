@@ -24,10 +24,17 @@ makeDancer.prototype.setPosition = function() {
 };
 
 makeDancer.prototype.lineUp = function() {
-  var styleSettings = {
-    top: 500,
-    left: this.left
-  };
-  this.$node.css(styleSettings);
-  this.$node.animate({top: '250px'}, 'slow');
+  var left = Math.random() * 1100;
+  this.$node.animate({top: '250px',
+    left: left}, 'slow');
+};
+
+makeDancer.prototype.groupUp = function() {
+};
+
+makeDancer.prototype.randomize = function() {
+  var left = Math.random() * 1100;
+  var top = Math.random() * 600;
+  this.$node.animate({top: top,
+    left: left}, 'slow');
 };

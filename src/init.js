@@ -36,4 +36,21 @@ $(document).ready(function() {
       item.lineUp();
     });
   });
+
+  $('.groupUpDancers').on('click', function(event) {
+    window.dancers.forEach(function(item) {
+      item.groupUp();
+    });
+  });
+
+  $('.randomizeDancers').on('click', function(event) {
+    window.dancers.forEach(function(item) {
+      item.randomize();
+    });
+  });
+
+  $(document).on('click', '.dancer', function(event) {
+    $(this).remove();
+  });
 });
+

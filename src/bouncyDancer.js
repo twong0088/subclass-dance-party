@@ -10,3 +10,10 @@ makeBouncyDancer.prototype.constructor = makeBouncyDancer;
 makeBouncyDancer.prototype.step = function () {
 
 };
+makeBouncyDancer.prototype.groupUp = function() {
+  var top = (Math.random() * 100) + 300;
+  var left = (Math.random() * 200);
+  this.$node.animate({
+    top: top,
+    left: left}, 'slow');
+};

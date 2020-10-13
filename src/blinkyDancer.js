@@ -11,3 +11,11 @@ makeBlinkyDancer.prototype.step = function () {
   makeDancer.prototype.step.call(this);
   this.$node.toggle();
 };
+
+makeBlinkyDancer.prototype.groupUp = function() {
+  var top = (Math.random() * 100);
+  var left = (Math.random() * 300) + 375;
+  this.$node.animate({
+    top: top,
+    left: left}, 'slow');
+};
