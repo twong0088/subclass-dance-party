@@ -40,7 +40,7 @@ makeEdmDancer.prototype.step = function () {
 
 makeEdmDancer.prototype.groupUp = function() {
   var top = (Math.random() * 100) + 300;
-  var left = (Math.random() * 600) + 800;
+  var left = (Math.random() * 200) + 900;
   this.$node.animate(
     {
       top: top,
