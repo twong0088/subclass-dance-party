@@ -20,11 +20,131 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
+/* .dancer{
+
+  background: url('pic/green.png');
+  background-size: 200px;
+  width: 200px;
+  height: 250px;
   position:absolute;
-}
+
+} */
 .blinkyDancer{
 
+  background: url('pic/test.png');
+  background-size: 200px;
+  width: 200px;
+  height: 250px;
+  position:absolute;
+
+}
+.bouncyDancer{
+
+  background: url('pic/red.png');
+  background-size: 200px;
+  width: 200px;
+  height: 250px;
+  position:absolute;
+
+  background-repeat: repeat;
+  -webkit-animation-duration: 1s infinite;
+  animation-duration: 1s infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+ }
+
+ @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+ }
+
+ .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+ }
+
+  /* animation-name: bounce;
+  animation-timing-function: ease;
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1,1)
+      translateY(0); }
+    10% {
+      transform: scale(1.1,.9)
+      translateY(0); }
+    30% {
+      transform: scale(.9,1.1)
+      translateY(0); }
+    50% {
+      transform: scale(1.05,.95)
+      translateY(0); }
+    57% {
+      transform: scale(1,1)
+      translateY(-7px); }
+    64% {
+      transform: scale(1,1)
+      translateY(0); }
+    100% {
+      transform: scale(1,1)
+      translateY(0); } */
+
+
+/* .bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1,1)
+    translateY(0); }
+  10% {
+    transform: scale(1.1,.9)
+    translateY(0); }
+  30% {
+    transform: scale(.9,1.1)
+    translateY(0); }
+  50% {
+    transform: scale(1.05,.95)
+    translateY(0); }
+  57% {
+    transform: scale(1,1)
+    translateY(-7px); }
+  64% {
+    transform: scale(1,1)
+    translateY(0); }
+  100% {
+    transform: scale(1,1)
+    translateY(0); }
+
+} */
+
+.edmDancer{
+
+  background: url('pic/blue.png');
+  background-size: 200px;
+  position:absolute;
+  width: 200px;
+  height: 250px;
+  animation: rotation 1.2s infinite ease-in-out;
+
+}
+@keyframes rotation {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
 }
